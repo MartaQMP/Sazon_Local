@@ -1,3 +1,24 @@
+:root {
+    --primary-color: #556B2f;
+    --primary-light: #6B8E23;
+    --primary-soft: #8FBC8F;
+    --light-cream: #FAF9F6;
+
+    --accent-color: #A0522D;
+    --bg-secondary: #F5F5DC;
+    --bg-main: var(--light-cream);
+
+    --text-main: #2F2F2F;
+    --text-muted: #666666;
+    --text-light: var(--light-cream);
+
+    --status-success: #2E8B57;
+    --status-error: #CD5C5C;
+
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-main: 1px solid #E0E0E0;
+}
+
 html {
   font-size: 14px;
 }
@@ -18,7 +39,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    margin-bottom: 60px;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
