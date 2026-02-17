@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Sazon_Local.Data;
+using Sazon_Local.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IRepository, Repository>();
+string connection = builder.Configuration.GetConnectionString("SqlServer");
+builder.Services.AddDbContext<SazonContext>(options => options.UseSqlServer(connection));
 
 var app = builder.Build();
 
