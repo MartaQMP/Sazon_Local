@@ -1,22 +1,38 @@
 :root {
+    /* --- COLORES MARCA (Sazón Local) --- */
     --primary-color: #556B2f;
+    --primary-hover: #405123;
+    --primary-active: #2F3E1B;
     --primary-light: #6B8E23;
     --primary-soft: #8FBC8F;
+    /* --- TONOS DE FONDO Y NEUTROS --- */
     --light-cream: #FAF9F6;
-
-    --accent-color: #A0522D;
-    --bg-secondary: #F5F5DC;
     --bg-main: var(--light-cream);
-
+    --bg-secondary: #F5F5DC;
+    --white: #ffffff;
+    --border-line: #E0E0E0;
+    /* --- COLORES DE ACENTO --- */
+    --accent-color: #A0522D;
+    --accent-hover: #8B4513;
+    /* --- TEXTOS --- */
     --text-main: #2F2F2F;
+    --text-secondary: #555555;
     --text-muted: #666666;
     --text-light: var(--light-cream);
-
+    --text-light-hover: #FDFAF5;
+    /* --- ESTADOS ---- */
     --status-success: #2E8B57;
     --status-error: #CD5C5C;
-
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --border-main: 1px solid #E0E0E0;
+    --status-warning: #E9967A;
+    /* --- ESTRUCTURA Y EFECTOS --- */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --border-main: 1px solid var(--border-line);
 }
 
 html {
@@ -51,4 +67,39 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.nav-link-custom {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 10px 5px !important;
+    transition: var(--transition);
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    margin-top: 5px;
+    right: 0;
+    background-color: var(--bg-secondary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* Efecto Hover: Cambia color y muestra línea */
+.nav-link-custom:hover::after {
+    width:100%;
+}
+
+.nav-link-custom:hover {
+    color: var(--text-light-hover);
 }
