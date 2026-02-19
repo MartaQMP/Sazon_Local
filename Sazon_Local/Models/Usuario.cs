@@ -23,6 +23,9 @@ namespace Sazon_Local.Models
 
         [Column("CONTRASENA")]
         public string Contrasena { get; set; }
+
+        [Column("IMAGEN")]
+        public string Imagen { get; set; }
         
         [Column("TELEFONO")]
         public string Telefono { get; set; }

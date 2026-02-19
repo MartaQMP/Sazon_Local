@@ -17,6 +17,9 @@ namespace Sazon_Local.Models
         [Column("DESCRIPCION")]
         public string Descripcion { get; set; }
 
+        [Column("IMAGEN")]
+        public string? Imagen { get; set; }
+
         [Column("PRECIO_UNIDAD", TypeName = "decimal(10, 2)")] 
         public decimal PrecioUnidad { get; set; }
 
